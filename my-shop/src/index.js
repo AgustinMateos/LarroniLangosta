@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const firebaseConfig = {
   apiKey: "AIzaSyC8EvqPqTEV5posRWpdN49E1mCiGj_JdoE",

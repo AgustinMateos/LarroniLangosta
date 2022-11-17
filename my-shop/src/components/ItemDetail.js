@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import {collection,getDoc, doc, getFirestore} from 'firebase/firestore'
 import { useCart } from "./context/CartContext";
 
+
+
 const ItemDetail =()=>{
     
     const {id} =useParams()
@@ -30,16 +32,14 @@ const ItemDetail =()=>{
 
     return(
        
-        <div>
+        <div >
         <div>{product.name}</div>
         <div>$ {product.price}</div>  
         <p>{product.description}</p>
         <img src={product.img} width='200'/>
-        <button onClick={addHandler}>Agregar</button>
+        <button onClick={addHandler}>+</button>
         </div>
-        
-        
-        
+
     )
     }
 

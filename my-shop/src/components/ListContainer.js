@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { collection, getFirestore, getDocs } from 'firebase/firestore'
 import { Link } from "react-router-dom";
+import './ListContainer.css'
 
 
 
 export const Card = ({ id, img, name, price }) => {
     return (
-    <Link to={`/detail/${id}`}>
-        <div>{name}</div>
-        <div>{price}</div>  
-        <img src={img} width='200'/>
-    </Link>
+        <Link to={`/detail/${id}`}>
+            <div>{name}</div>
+            <span>$: {price}</span>
+            <img src={img} width='200' />
+        </Link>
     )
 }
 
@@ -32,15 +33,18 @@ const ListContainer = () => {
             setProducts(productsData)
             setLoading(false)
         })
-    } 
+    }
 
     return (
-        <div>
-          {loading ? <h1>Loading...</h1>
-          :
-          products.map(p => <Card key={p.id}  {...p} />)
-          }
-        </div>)
+        <div className="bg-light ListContainer" > <h1>Productos Larroni</h1>
+            <div className="ItemslistContainer">
+            {loading ? <h1>Loading...</h1>
+                :
+                products.map(p => <Card  key={p.id}  {...p} />)
+            }
+        </div>
+        </div>
+    )
 }
-    
+
 export default ListContainer; 

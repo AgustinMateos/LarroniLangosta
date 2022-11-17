@@ -5,7 +5,7 @@ import { CartContextProvider } from './components/context/CartContext';
 import ItemDetail from './components/ItemDetail';
 import ListContainer from './components/ListContainer';
 import NavBar from './components/NavBar';
-
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,8 +17,10 @@ function App() {
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/detail/:id' element={<ItemDetail/>}/>
     </Routes>
-    </BrowserRouter>
+    </BrowserRouter> 
+    <Footer/>
     </CartContextProvider>
+   
   );
 }
 export default App;

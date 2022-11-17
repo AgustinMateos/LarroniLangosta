@@ -1,0 +1,12 @@
+.NavBarContainer {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Rubik Bubbles', cursive;
+    color: black;
+    list-style-type: none;
+    font-size:x-large;
+    min-height: 80px;
+}
+
+a{text-decoration: none;color: black;font-family: 'Rubik Bubbles', cursive;}
+a:hover{color: gray;}

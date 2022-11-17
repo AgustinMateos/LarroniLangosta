@@ -1,0 +1,5 @@
+.footerContainer{
+    background-color: black;color: blueviolet;min-height: 200px;
+    border-top:10px  double orange;
+    border-bottom: 10px  double orange;
+}
