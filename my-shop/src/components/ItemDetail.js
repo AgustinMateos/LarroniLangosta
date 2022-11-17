@@ -1,12 +1,15 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import {collection,getDoc, doc, getFirestore} from 'firebase/firestore'
+import { useCart } from "./context/CartContext";
 
 const ItemDetail =()=>{
     
     const {id} =useParams()
     const [product, setProduct] = useState({})
     
+    const {addToCart} =useCart()
+
     useEffect(() => {
         getProduct()
     }, [])
@@ -20,6 +23,10 @@ const ItemDetail =()=>{
         setProduct(respuesta.data())})
         }
 
+     const addHandler=()=>{
+        addToCart(product)
+     }
+
 
     return(
        
@@ -28,6 +35,7 @@ const ItemDetail =()=>{
         <div>$ {product.price}</div>  
         <p>{product.description}</p>
         <img src={product.img} width='200'/>
+        <button onClick={addHandler}>Agregar</button>
         </div>
         
         
