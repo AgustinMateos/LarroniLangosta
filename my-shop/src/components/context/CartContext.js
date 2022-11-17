@@ -6,6 +6,7 @@ const CartContext=createContext({
     addToCart:()=> {},
     clearCart:()=>{},
     count:0,
+    
 })
 
 const useCart=()=>{
@@ -23,12 +24,12 @@ const CartContextProvider = ({children}) =>{
         setProducts([])
     }
 
-
     const context={
         products:products,
         addToCart:addToCart,
         clearCart:clearCart,
         count:products.length
+        
     }
 
 return(
@@ -40,8 +41,6 @@ return(
 }
 
 export {useCart, CartContextProvider}
-
-
 
 
 

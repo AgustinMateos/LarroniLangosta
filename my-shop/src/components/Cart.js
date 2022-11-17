@@ -10,7 +10,12 @@ const Cart =()=>{
     return(
         <div>
         <div>Cart</div>
-        {products.map((p,i)=><li key={i}>{p.name} : {p.price} </li>)}
+        {products.map((p,i)=><li key={i}>Product: {p.name}  Price:${p.price}  
+        <img src={p.img}  width='200'/>
+        <button>+</button>
+
+        <button>-</button>
+        </li>)}
         <button onClick={clearCart}>limpiar carrito</button>
         </div>
     )
