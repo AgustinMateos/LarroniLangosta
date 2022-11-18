@@ -1,11 +1,11 @@
 import './Footer.css'
 
 const Footer = () => {
-    return (<div className='footerContainer'>
+    return (<div className='footerContainer shadow-lg p-3 mb-5 bg-white rounded'>
         <div >
             <h2>Larroni Bebidas S.A</h2>
             <div><p>Contacto</p>
-                 <p>Telefono: #+54 0115645467</p>
+                 <p>Telefono: +54 0115645467</p>
                  <p>Direccion: Pichincha 5321 P.B. cp:2354</p>
                 </div>
 
