@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import {collection,getDoc, doc, getFirestore} from 'firebase/firestore'
 import { useCart } from "./context/CartContext";
-
+import './ItemDetail.css'
 
 
 const ItemDetail =()=>{
@@ -32,11 +32,11 @@ const ItemDetail =()=>{
 
     return(
        
-        <div >
+        <div className="cardContainerData" >
+        <img className="cardContainerImg" src={product.img} width='200'/>
         <div>{product.name}</div>
-        <div>$ {product.price}</div>  
-        <p>{product.description}</p>
-        <img src={product.img} width='200'/>
+        <p className="cardContainerDescription">{product.description}</p>
+        <div>$ {product.price}</div>
         <button onClick={addHandler}>+</button>
         </div>
 
