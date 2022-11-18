@@ -38,6 +38,7 @@ const ItemDetail =()=>{
         <p className="cardContainerDescription">{product.description}</p>
         <div>$ {product.price}</div>
         <button onClick={addHandler}>+</button>
+        <button>-</button>
         </div>
 
     )

@@ -9,7 +9,7 @@ const Cart =()=>{
 
     return(
         <div>
-        <div>Cart</div>
+        <div>Carrito Larroni</div>
         {products.map((p,i)=><li key={i}>Product: {p.name}  Price:${p.price}  
         <img src={p.img}  width='200'/>
         </li>)}
