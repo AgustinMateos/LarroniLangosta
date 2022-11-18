@@ -6,6 +6,8 @@
     list-style-type: none;
     font-size:x-large;
     min-height: 80px;
+    align-items: center;
+    padding: 10px;
 }
 
 a{text-decoration: none;color: black;font-family: 'Rubik Bubbles', cursive;}

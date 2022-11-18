@@ -7,4 +7,20 @@
     
 }
 
-.ListContainer{min-height: 450px;}
+.ListContainer{min-height: 500px;}
+
+.ListContainerTitle{
+    font-family: 'Rubik Bubbles', cursive;
+    font-size:x-large;
+}
+
+.cardContainerDetail {
+    background-color: gray;
+    width: 200px;
+    color: white;
+    border: 1px solid gray;
+    margin: 20px;
+    border-radius: 15px;
+    text-align: center;
+    height: 250px;
+}

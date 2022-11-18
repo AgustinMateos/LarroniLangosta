@@ -31,7 +31,8 @@ const ItemDetail =()=>{
 
 
     return(
-       
+        <div className="cardContainerDataFlex">
+            <h1 className="cardContainerDataTitle">Producto Seleccionado</h1>
         <div className="cardContainerData" >
         <img className="cardContainerImg" src={product.img} width='200'/>
         <div>{product.name}</div>
@@ -39,7 +40,7 @@ const ItemDetail =()=>{
         <div>$ {product.price}</div>
         <button onClick={addHandler}>+</button>
         <button>-</button>
-        </div>
+        </div></div>
 
     )
     }

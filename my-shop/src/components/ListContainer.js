@@ -8,10 +8,10 @@ import './ListContainer.css'
 export const Card = ({ id, img, name, price }) => {
     return (
         <Link to={`/detail/${id}`}>
-            <div className="cardContainerData">
+            <div className="cardContainerDetail">
                 <div><img className="cardContainerImg" src={img} width='200'/></div>
-                <div className="cardContainerDescription">{name}
-                <span>$:{price}</span></div></div>
+                <div className="cardContainerDescription">{name}</div>
+            </div>
 
 
 
@@ -40,7 +40,7 @@ const ListContainer = () => {
     }
 
     return (
-        <div className="bg-light ListContainer" > <h1>Productos Larroni</h1>
+        <div className="bg-light ListContainer" > <h1 className="ListContainerTitle">Productos Larroni</h1>
             <div className="ItemslistContainer">
                 {loading ? <h1>Loading...</h1>
                     :
