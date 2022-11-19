@@ -10,10 +10,9 @@ const Cart =()=>{
     return(
         <div className="CartContainer">
         <div className="CartTitle">Carrito Larroni</div>
-        {products.map((p,i)=><li key={i}>Product: {p.name}  Price:${p.price}  
-        <img src={p.img}  width='200'/>
-        </li>)}
-        <button onClick={clearCart}>Vaciar Carrito</button>
+        <div><button onClick={clearCart}><img width="25px" src="../imagenes/basura.png"></img>Vaciar Carrito</button></div>
+        <div> {products.map((p,i)=><li key={i}>Product: {p.name}  Price:${p.price}  
+        <img src={p.img}  width='200'/></li>)}</div>
         </div>
     )
 }
