@@ -9,7 +9,7 @@ export const Card = ({ id, img, name }) => {
     return (
         <Link to={`/detail/${id}`}>
             <div className="cardContainerDetail">
-                <div><img className="cardContainerImg" src={img} width='200'/></div>
+                <div><img className="cardContainerImg" alt={name} src={img} width='200'/></div>
                 <div className="cardContainerDescription">{name}</div>
             </div>
         </Link>
@@ -38,7 +38,8 @@ const ListContainer = () => {
 
     return (
         <div className="bg-light ListContainer" > 
-          <h1 className="ListContainerTitle">Productos Larroni</h1>
+        <h1 className="ListContainerTitle">Larroni Bebidas</h1>
+          <h4 className="ListContainerTitle">Productos Larroni</h4>
             <div className="ItemslistContainer">
                 {loading ? <h1>Loading...</h1>
                     :

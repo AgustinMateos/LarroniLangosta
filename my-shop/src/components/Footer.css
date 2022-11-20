@@ -1,5 +1,7 @@
 .footerContainer{
     min-height: 200px;
-    color: black;font-family: 'Rubik Bubbles', cursive;
-    ;
+    font-family: 'Monserrat';
+    color: rgb(181, 181, 181);  
 }
+
+.footerRightReserved{display: flex;justify-content: center; color: rgb(212, 212, 212);}

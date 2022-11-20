@@ -2,7 +2,7 @@ import { addDoc, collection, getFirestore, } from 'firebase/firestore';
 import React, { useState } from 'react'
 import { useCart } from "./context/CartContext";
 import './Order.css'
-
+import swal from 'sweetalert2';
 
 export const UserForm = ({ setUser }) => {
 
@@ -27,17 +27,24 @@ export const UserForm = ({ setUser }) => {
 
 const Order = () => {
   const { products, clearCart } = useCart()
-  const { user, setUser } = useState({})
+  const [user, setUser] = useState({})
 
 
   const putOrder = () => {
 
 
+      swal.fire({
+        position: 'center',
+        icon: 'success',
+        text: "Tu compra se ha realizado con éxito . Te llegará un mail al e-mail que indicaste en el formulario con todos los detalles que necesitas tener para la entrega. Gracias por comprar con nosotros!",
+        showConfirmButton: false,
+        timer: 9500
+      })  
 
     const order = {
       buyer: user,
       total: 0,
-      items: products
+      items: products,
 
     }
     clearCart()

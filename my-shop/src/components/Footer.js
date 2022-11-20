@@ -8,7 +8,10 @@ const Footer = () => {
                  <p>Telefono: +54 0115645467</p>
                  <p>Direccion: Pichincha 5321 P.B. cp:2354</p>
                 </div>
-
+         <div>
+            <div></div>
+         </div>
+             <div className="footerRightReserved">Copyright © 2022 - All right reserved</div>
         </div>
         </div>)
 }

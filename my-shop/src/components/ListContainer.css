@@ -12,6 +12,7 @@
 .ListContainerTitle{
     font-family: 'Rubik Bubbles', cursive;
     font-size:x-large;
+    margin: 5px;
 }
 
 .cardContainerDetail {

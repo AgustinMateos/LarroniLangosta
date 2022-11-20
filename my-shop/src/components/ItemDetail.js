@@ -27,6 +27,8 @@ const ItemDetail =()=>{
 
      const addHandler=()=>{
         addToCart(product)
+
+     
      }
 
 
@@ -34,12 +36,12 @@ const ItemDetail =()=>{
         <div className="cardContainerDataFlex">
             <h1 className="cardContainerDataTitle">Producto Seleccionado</h1>
         <div className="cardContainerData" >
-        <img className="cardContainerImg" src={product.img} width='200'/>
-        <div>{product.name}</div>
+        <img className="cardContainerImg" alt={product} src={product.img} width='200'/>
+        <h4>{product.name}</h4>
         <p className="cardContainerDescription">{product.description}</p>
         <div>$ {product.price}</div>
-        <button onClick={addHandler}>+</button>
-        <button>-</button>
+        <button onClick={addHandler} className="m-1">+</button>
+        <button className="m-1">-</button>
         </div></div>
 
     )

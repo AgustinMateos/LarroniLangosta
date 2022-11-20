@@ -1,13 +1,16 @@
-import { createContext,  useContext } from "react";
+import React, { createContext,  useContext } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
+import swal from 'sweetalert2';
 
 const CartContext=createContext({
     products:[],
     addToCart:()=> {},
     clearCart:()=>{},
     count:0,
+  
     
 })
+
 
 const useCart=()=>{
     return useContext(CartContext)
@@ -22,13 +25,23 @@ const CartContextProvider = ({children}) =>{
     }
     const clearCart=()=>{
         setProducts([])
+        swal.fire({
+            position: 'center',
+            text: "Se vacio el carrito",
+            showConfirmButton: false,
+            timer: 2500
+          }) 
     }
+
+   
+
 
     const context={
         products:products,
         addToCart:addToCart,
         clearCart:clearCart,
-        count:products.length
+        count:products.length,
+       
         
     }
 
