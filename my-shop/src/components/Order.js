@@ -45,6 +45,7 @@ const Order = () => {
       buyer: user,
       total: 0,
       items: products,
+      date:Date()
 
     }
     clearCart()
